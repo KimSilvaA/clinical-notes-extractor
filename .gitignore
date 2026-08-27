@@ -1,0 +1,6 @@
+steps.md
+__pycache__
+notebooks/
+*.csv
+*.json
+data/raw/*

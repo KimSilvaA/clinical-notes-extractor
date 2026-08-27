@@ -1,0 +1,13 @@
+allergies.csv
+careplans.csv
+conditions.csv
+devices.csv
+encounters.csv
+imaging_studies.csv
+immunizations.csv
+medications.csv
+observations.csv
+organizations.csv
+patients.csv
+procedures.csv
+providers.csv
