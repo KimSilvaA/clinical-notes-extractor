@@ -30,11 +30,13 @@ def extract_data(report):
 
     # Array keys 
     output_keys = ['complaints', 'history', 'social_history', 
-                   'allergies', 'medications', 'assessment', 'plan']
+                   'allergies', 'current_medications', 'assessment', 'plan']
 
     # Initialize array to store data 
     data_output = {} 
-    
+
+    data_output['date'] = report[1:11]
+
 
     idx = [report.find(s) for s in substr]
 
@@ -89,10 +91,11 @@ def get_notes(patient_file):
                 # Get clinical note
                 encoded_str = entry['resource']['content'][0]['attachment']['data']
                 report = base64.b64decode(encoded_str).decode('utf-8') # Decode note
-
+                # Extract data in clinical note 
                 data_dict = extract_data(report)
+                # get ID of clinical note 
+                data_dict['clinical_note_id'] = entry['resource']['id']
                 data_list.append(data_dict)
     return data_list
-
 
 

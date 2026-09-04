@@ -10,3 +10,4 @@ PLAN_SUBSTR = "## Plan"
 
 # File path
 RAW_INPUT_DIR = Path(__file__).parent.parent  / "src" / "data" / "raw" / "fhir" 
+OUTPUT_DIR = Path(__file__).parent.parent  / "src" / "data" / "output"
